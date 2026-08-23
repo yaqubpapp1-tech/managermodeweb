@@ -1,10 +1,9 @@
-name = "managercareerweb"
+name = "managermodeweb"
+
 compatibility_date = "2026-08-23"
 
-# Static site: deploy the repository root as Workers Assets.
-# This is intentionally configured for `wrangler deploy`, not Pages.
 [assets]
-directory = "."
+directory = "./public"
 
 [observability]
 enabled = true
