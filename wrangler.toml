@@ -1,3 +1,10 @@
 name = "managercareerweb"
 compatibility_date = "2026-08-23"
-pages_build_output_dir = "."
+
+# Static site: deploy the repository root as Workers Assets.
+# This is intentionally configured for `wrangler deploy`, not Pages.
+[assets]
+directory = "."
+
+[observability]
+enabled = true
