@@ -179,6 +179,6 @@ function stats(){shell('Stats','Squad ratings and manager performance.',`<div cl
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';clearTimeout(window.tt);window.tt=setTimeout(()=>t.style.display='none',1800)}
 function saveGame(){localStorage.setItem('managercareerweb',JSON.stringify({lineup,lineupPos,bench,registered,page,manager,careerStarted,footballStyle}));toast('Career saved locally')}
 function loadGame(){try{const x=JSON.parse(localStorage.getItem('managercareerweb'));if(x){lineup=x.lineup||lineup;lineupPos=x.lineupPos||lineupPos;bench=x.bench||bench;registered=x.registered||[...lineup,...bench];manager=x.manager||manager;careerStarted=!!x.careerStarted;footballStyle=x.footballStyle||footballStyle}}catch(e){}if(!careerStarted){setup();}else go(page)}
-
+loadGame();
 </script>
 </body></html>
